@@ -23,7 +23,7 @@ function App() {
 
       <div className="flex flex-col align-center justify-between px-8 py-28 max-w-7xl mx-auto">
         <h2 className="font-bold text-5xl flex-col lg:flex-row">Build Your Ideal</h2>
-        <h2 className="font-bold text-5xl flex-col lg:flex-row bg-gradient-to-r from-orange-500 to-violet-800 bg-clip-text text-transparent">
+        <h2 className="font-bold text-5xl flex-col lg:flex-row bg-linear-to-r from-orange-500 to-violet-800 bg-clip-text text-transparent">
           Development Stack
         </h2>
         <p className="flex-col lg:flex-row pt-2 text-slate-600">
@@ -32,7 +32,7 @@ function App() {
           next project.
         </p>
         <div className="flex-col lg:flex-row pt-3 flex gap-2">
-          <button className="bg-gradient-to-r from-orange-400 to-rose-500 rounded-xl px-3 py-1 text-white font-medium">
+          <button className="bg-linear-to-r from-orange-400 to-rose-500 rounded-xl px-3 py-1 text-white font-medium">
             Explore Technologies
           </button>
           <button className="border-2 border-gray-400 rounded-xl px-9 py-1 text-slate-700 font-medium">
@@ -43,7 +43,7 @@ function App() {
 
         <h2 className="font-bold text-3xl pl-20 mt-12">
           Explore the{" "}
-          <span className="bg-gradient-to-r from-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>

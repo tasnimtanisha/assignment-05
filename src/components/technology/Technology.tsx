@@ -24,7 +24,7 @@ const Technology = ({ technologyPromise, selectedTech, setSelectedTech }: Techno
         const isSelected = selectedTech.some((item) => item.id === tech.id);
 
         return (
-          <div key={tech.id} className="p-5 container card bg-base-110 w-[280px] shadow-sm">
+          <div key={tech.id} className="p-5 container card bg-base-110 w-70 shadow-sm">
             <div>
               <div className="flex justify-between items-start">
                 <img src={tech.icon} className="w-10" alt={tech.name} />
@@ -35,7 +35,7 @@ const Technology = ({ technologyPromise, selectedTech, setSelectedTech }: Techno
               <h2 className="text-xl font-bold">{tech.name}</h2>
               <p className="text-gray-400 text-sm">{tech.description}</p>
               <div className="flex justify-between gap-5 text-sm mt-3">
-                <p className="bg-gray-300 text-gray-700 rounded px-2 py-[2px]">
+                <p className="bg-gray-300 text-gray-700 rounded px-2 py-0.5">
                   {tech.category}
                 </p>
                 <p className="text-gray-500">{tech.difficulty}</p>
