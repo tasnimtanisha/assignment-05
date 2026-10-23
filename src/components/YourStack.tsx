@@ -7,18 +7,16 @@ interface YourStackProps {
 }
 
 const YourStack = ({ selectedTech, setSelectedTech }: YourStackProps) => {
-  // Remove single item
   const handleRemoveOne = (id: string | number) => {
     setSelectedTech((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Remove all items
   const handleRemoveAll = () => {
     setSelectedTech([]);
   };
 
   return (
-    <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm w-75 h-fit">
+    <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm w-full lg:w-80 h-fit">
       <h3 className="text-2xl font-bold text-slate-800">Your Stack</h3>
       <p className="text-slate-400 text-sm mb-6 mt-1">
         {selectedTech.length} {selectedTech.length === 1 ? 'Technology' : 'Technologies'} Selected

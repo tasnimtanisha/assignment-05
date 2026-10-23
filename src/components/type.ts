@@ -9,3 +9,5 @@ export interface TechType{
     "difficulty": string,
     "badge": string
 }
+
+

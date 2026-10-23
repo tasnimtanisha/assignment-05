@@ -56,7 +56,7 @@ const Nav = () => {
           </ul>
           
           <div className="flex flex-col gap-2 pt-3 border-t border-gray-100">
-            <button className="w-full text-center py-1.5 border border-gray-200 rounded-xl">Sign In</button>
+            <button className="w-full text-center py-1.5 rounded-xl">Sign In</button>
             <button className="w-full bg-pink-500 text-white py-1.5 rounded-xl">Sign Up</button>
           </div>
         </div>

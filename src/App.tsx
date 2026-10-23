@@ -18,42 +18,54 @@ function App() {
   const [selectedTech, setSelectedTech] = useState<TechType[]>([]);
 
   return (
-    <div className="min-h-screen bg-slate-50/30 pt-20">
+    <div className="min-h-screen bg-slate-50/30 pt-6 md:pt-4 overflow-x-hidden">
       <Nav />
 
-      <div className="flex flex-col align-center justify-between px-8 py-28 max-w-7xl mx-auto">
-        <h2 className="font-bold text-5xl flex-col lg:flex-row">Build Your Ideal</h2>
-        <h2 className="font-bold text-5xl flex-col lg:flex-row bg-linear-to-r from-orange-500 to-violet-800 bg-clip-text text-transparent">
-          Development Stack
-        </h2>
-        <p className="flex-col lg:flex-row pt-2 text-slate-600">
-          Explore frontend, backend, database, and tooling options,<br />
-          compare them side by side, and put together the stack that fits your <br />
-          next project.
-        </p>
-        <div className="flex-col lg:flex-row pt-3 flex gap-2">
-          <button className="bg-linear-to-r from-orange-400 to-rose-500 rounded-xl px-3 py-1 text-white font-medium">
-            Explore Technologies
-          </button>
-          <button className="border-2 border-gray-400 rounded-xl px-9 py-1 text-slate-700 font-medium">
-            Learn More
-          </button>
-        </div>
-        <img src={Banner} alt="" className="ms-auto block h-auto -mt-80" />
+      <div className="px-4 sm:px-8 py-8 md:py-12 max-w-7xl mx-auto">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
+          
+          <div className="w-full lg:w-1/2">
+            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
+              Build Your Ideal
+            </h2>
+            <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl bg-linear-to-r from-orange-500 to-violet-800 bg-clip-text text-transparent leading-tight">
+              Development Stack
+            </h2>
+            <p className="pt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+              Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.
+            </p>
 
-        <h2 className="font-bold text-3xl pl-20 mt-12">
-          Explore the{" "}
-          <span className="bg-linear-to-r from-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
-            Technologies
-          </span>
-        </h2>
-        <p className="pl-20 pt-2 text-slate-500">
-          Pick one technology per category to build your ideal stack.
-        </p>
+            <div className="pt-4 flex flex-wrap items-center gap-3">
+              <button className="bg-linear-to-r from-orange-400 to-rose-500 rounded-xl px-4 py-2 text-white font-medium text-sm sm:text-base">
+                Explore Technologies
+              </button>
+              <button className="border-2 border-gray-400 rounded-xl px-6 py-2 text-slate-700 font-medium text-sm sm:text-base">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <img src={Banner} alt="Banner" className="w-full max-w-[280px] sm:max-w-md lg:max-w-full h-auto object-contain" />
+          </div>
+
+        </div>
+
+        <div className="mt-10 lg:mt-12">
+          <h2 className="font-bold text-2xl sm:text-3xl text-slate-900">
+            Explore the{" "}
+            <span className="bg-linear-to-r from-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
+              Technologies
+            </span>
+          </h2>
+          <p className="pt-1 text-sm sm:text-base text-slate-500">
+            Pick one technology per category to build your ideal stack.
+          </p>
+        </div>
       </div>
 
       <Suspense fallback={<h2 className="text-center py-10">Loading......</h2>}>
-        <div className="max-w-7xl mx-auto px-8 flex gap-8 items-start justify-between pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-8 items-start justify-between pb-20">
           <Technology
             technologyPromise={technologyPromise}
             selectedTech={selectedTech}
@@ -66,8 +78,8 @@ function App() {
         </div>
       </Suspense>
 
-      <footer className="border-t border-gray-200 pt-10 pb-16 px-16 bg-white">
-        <div className="grid grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <footer className="border-t border-gray-200 pt-10 pb-16 px-6 sm:px-16 bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           <div>
             <img src={Logo} alt="" />
             <p className="pt-4 text-sm text-slate-500">
